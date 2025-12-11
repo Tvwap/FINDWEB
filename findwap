@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV4WAP LIVE4WAP TVGOTK WAPTV - Site Index</title>
+    <title>FINDWAP | FINDWAP.PAGES.DEV </title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -313,11 +313,11 @@
 
 <div id="fixed-controls-container-top">
     <div id="main-header">
-        FILMYWAP.PAGES.DEV
+        FINDWAP.PAGES.DEV
     </div>
     <div id="filter-container">
         <div class="control-box">
-             <input type="text" id="search-input" placeholder="Search site name or description">
+             <input type="text" id="search-input" placeholder="Search site ">
         </div>
     </div>
 </div>
@@ -331,40 +331,40 @@
 
 <div class="disclaimer">
     <center><font size="1px" color="#333">
-   Disclaimer: This index is for informational purposes only. All Content Free Available in Google Search.
+   Disclaimer: This index is for informational purposes only. All Content Data Available in Google Search.
     </font></center>
 </div>
     
 <script>
     // --- Configuration (URLs unchanged) ---
     const AZ_URLS = {
-        '0-9': 'https://live4wap.neocities.org/0.txt',
-        'A': 'https://live4wap.neocities.org/A.txt',
-        'B': 'https://live4wap.neocities.org/B.txt', 
-        'C': 'https://live4wap.neocities.org/C.txt', 
-        'D': 'https://live4wap.neocities.org/D.txt', 
-        'E': 'https://live4wap.neocities.org/E.txt', 
-        'F': 'https://live4wap.neocities.org/F.txt', 
-        'G': 'https://live4wap.neocities.org/G.txt', 
-        'H': 'https://live4wap.neocities.org/H.txt', 
-        'I': 'https://live4wap.neocities.org/I.txt',
-        'J': 'https://live4wap.neocities.org/J.txt', 
-        'K': 'https://live4wap.neocities.org/K.txt', 
-        'L': 'https://live4wap.neocities.org/L.txt', 
-        'M': 'https://live4wap.neocities.org/M.txt', 
-        'N': 'https://live4wap.neocities.org/N.txt', 
-        'O': 'https://live4wap.neocities.org/O.txt', 
-        'P': 'https://live4wap.neocities.org/P.txt', 
-        'Q': 'https://live4wap.neocities.org/Q.txt', 
-        'R': 'https://live4wap.neocities.org/R.txt', 
-        'S': 'https://live4wap.neocities.org/S.txt', 
-        'T': 'https://live4wap.neocities.org/T.txt', 
-        'U': 'https://live4wap.neocities.org/U.txt', 
-        'V': 'https://live4wap.neocities.org/V.txt', 
-        'W': 'https://live4wap.neocities.org/W.txt', 
-        'X': 'https://live4wap.neocities.org/X.txt', 
-        'Y': 'https://live4wap.neocities.org/Y.txt', 
-        'Z': 'https://live4wap.neocities.org/Z.txt', 
+        '0-9': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/0-9',
+        'A': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/A',
+        'B': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/B', 
+        'C': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/C', 
+        'D': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/D', 
+        'E': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/E', 
+        'F': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/F', 
+        'G': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/G', 
+        'H': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/H', 
+        'I': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/I',
+        'J': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/J', 
+        'K': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/K', 
+        'L': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/L', 
+        'M': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/M', 
+        'N': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/N', 
+        'O': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/O', 
+        'P': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/P', 
+        'Q': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/Q', 
+        'R': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/R', 
+        'S': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/S', 
+        'T': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/T', 
+        'U': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/U', 
+        'V': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/V', 
+        'W': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/W', 
+        'X': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/X', 
+        'Y': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/Y', 
+        'Z': 'https://raw.githubusercontent.com/Tvwap/A2z-Name/refs/heads/main/Z', 
     };
     
     // --- Initial State ---
