@@ -1,0 +1,556 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV4WAP LIVE4WAP TVGOTK WAPTV - Site Index</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* ================================================================
+        IMPROVED CSS: BETTER TO BEST
+        - Enhanced color contrast and readability on dark theme.
+        - Optimized spacing and hit areas for mobile/touch.
+        - Modernized card, button, and shadow styling.
+        - Better handling for fixed elements and content clearance.
+        ================================================================
+        */
+        
+        :root {
+            /* Color Collection for Attractive Look */
+            --primary-bg: #0A0A0A;      
+            --secondary-bg: #1B1B1B;    /* Slightly lighter than before for better contrast */
+            --text-primary: #FFFFFF;    
+            --text-secondary: #C0C0C0;  /* Brighter secondary text for search placeholder/disclaimer */
+            --accent-color: #FF2E2E;    /* Brighter, more vibrant red */
+            --time-color: #FFD700;      /* Gold/Yellow for Ranking, slightly brighter */
+            --description-color: #A0A0A0; /* Better contrast for description */
+            --active-bg: #290059;       /* Darker, more muted active background */
+            --active-card-border: var(--time-color); 
+            --az-bar-bg: #1A1A1A;       /* Darker bottom bar */
+            --az-button-bg: #252525;
+            --az-button-text: #E0E0E0;
+            --az-button-active-bg: var(--accent-color);
+            --az-button-active-text: #FFFFFF;
+            --disclaimer-bg: #1A1A1A; 
+            --disclaimer-height: 50px; 
+            --az-bar-height: 130px; 
+
+            /* New Variables for Polish */
+            --card-radius: 8px;
+            --shadow-elevation-1: 0 1px 1px rgba(0, 0, 0, 0.5);
+            --shadow-elevation-2: 0 1px 1px rgba(0, 0, 0, 0.7);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            /* Increased padding for comfortable clearance from fixed elements */
+            padding-top: 112px; 
+            padding-bottom: calc(var(--disclaimer-height) + var(--az-bar-height) + 1px); 
+        }
+
+        a { 
+            color: var(--text-primary);
+            text-decoration: none; 
+            transition: color 0.2s; 
+        } 
+
+        /* --- FIXED TOP: Controls Container (Header and Search) --- */
+        #fixed-controls-container-top {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 500px;
+            z-index: 1001;
+            background-color: var(--primary-bg); 
+            padding-bottom: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+        }
+        
+        /* --- Header Title --- */
+        #main-header {
+            background-color: var(--secondary-bg);
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 1.4em; 
+            font-weight: 900; 
+            letter-spacing: 1px;
+        }
+
+        /* --- Filter/Search Bar --- */
+        #filter-container {
+            width: 100%; align:center ;
+            max-width: 500px;
+            margin: 0 auto; 
+            display: flex; 
+            gap: 0px; 
+            background-color: var(--primary-bg); 
+            padding: 4px 1px; 
+        }
+        .control-box { width: 100%;align:center}
+        #search-input {
+            width: 100%;
+            padding: 8px 10px; 
+            border: 1px solid #444; 
+            border-radius: 8px; 
+            background-color: #222; 
+            color: var(--text-primary);
+            font-size: 1em; 
+            outline: none;align:center 
+         
+        }
+        #search-input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0px var(--accent-color);
+        }
+        #search-input::placeholder { color: var(--text-secondary); }
+
+
+        /* --- Match List Container (SCROLLABLE CONTENT) --- */
+        #match-list-container {
+            width: 95%;
+            max-width: 500px;
+            margin: 0 auto 8px auto; 
+            display: grid;
+            gap: 8px; 
+        }
+        
+        .category-header {
+            display: none; 
+        }
+        
+        /* --- Icon Placeholder (Shows RANKING) --- */
+        .match-info .icon-placeholder {
+            width: 60px; 
+            height: 60px;
+            background-color: var(--primary-bg); 
+            border-radius: 20%; 
+            flex-shrink: 0; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em; 
+            font-weight: 700;
+            color: var(--time-color); 
+            border: 2px solid var(--time-color); 
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.4); 
+        }
+
+        /* --- FIXED BOTTOM: Disclaimer --- */
+        .disclaimer {
+            position: fixed;
+            bottom: 0; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 500px;
+            height: var(--disclaimer-height); 
+            z-index: 1002;
+            text-align: center;
+            padding: 5px 10px; 
+            background-color: var(--disclaimer-bg);
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.8); 
+        }
+        .disclaimer font {
+            color: var(--text-secondary);
+            font-size: 0.75em !important; 
+            line-height: 1.3;
+            display: block; 
+        }
+
+        /* --- FIXED BOTTOM: A-Z Navigation Bar --- */
+        #az-navigation-bar {
+            position: fixed;
+            bottom: var(--disclaimer-height); 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 500px;
+            height: var(--az-bar-height); 
+            background-color: var(--az-bar-bg);
+            z-index: 1003; 
+            padding: 5px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8); 
+            
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 3px; 
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch; 
+        }
+        #az-navigation-bar::-webkit-scrollbar { display: none;background :#1A1A1A}
+        #az-navigation-bar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* A-Z Button styles */
+        .az-button {
+            flex-grow: 0; 
+            flex-shrink: 0;
+            flex-basis: calc(10% - 3px); 
+            min-width: 30px; 
+
+            padding: 6px 4px; 
+            margin: 0; 
+            background-color: var(--az-button-bg); 
+            color: var(--az-button-text); 
+            font-weight: 700; 
+            font-size: 0.8em; 
+            text-align: center; 
+            cursor: pointer;
+            border-radius: 4px; 
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #333;
+            line-height: 1.2;
+        }
+
+        .az-button:hover {
+            background-color: #3A3A3A;
+        }
+
+        .az-button.active {
+            background-color: var(--az-button-active-bg); 
+            color: var(--az-button-active-text);
+            border-color: var(--az-button-active-bg); 
+            transform: scale(1.05);
+            box-shadow: 0 0 5px var(--accent-color);
+        }
+        
+        /* Match Card Styles */
+        .match-card { 
+            background-color: var(--secondary-bg); 
+            border-radius: var(--card-radius); 
+            padding: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            box-shadow: var(--shadow-elevation-1); 
+            cursor: pointer; 
+            transition: all 0.3s ease-in-out; 
+            border: 1px solid transparent; 
+            min-height: 80px; 
+        }
+        .match-card:hover { 
+            background-color: #2F2F2F; 
+            transform: translateY(-2px); 
+            box-shadow: var(--shadow-elevation-2);
+        }
+        .match-card.active { 
+            background-color: var(--active-bg); 
+            border-color: var(--active-card-border); 
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); 
+            transform: scale(1.00);
+        }
+        .match-info { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            flex-grow: 1; 
+        }
+
+        .match-details { 
+            display: flex; 
+            flex-direction: column; 
+            flex-grow: 1; 
+            min-width: 0; 
+        }
+        .match-name { 
+            font-weight: 800; 
+            font-size: 1.15em; 
+            color: var(--text-primary); 
+            line-height: 1.3; 
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+        .match-date { display: none; } 
+        .match-description { 
+            font-size: 0.8em; 
+            color: var(--description-color); 
+            margin-top: 4px; 
+            white-space: normal;
+            overflow-wrap: break-word; 
+        }
+        .arrow { 
+            font-size: 1.5em; 
+            color: var(--accent-color); 
+            margin-left: 15px; 
+            flex-shrink: 0;
+        }
+        .arrow i {
+            transition: color 0.2s;
+        }
+        .match-card:hover .arrow i {
+            color: var(--time-color); 
+        }
+
+        #loading-message { 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 1.2em; 
+            color: var(--time-color); 
+        }
+    </style>
+</head>
+<body>
+
+<div id="fixed-controls-container-top">
+    <div id="main-header">
+        FILMYWAP.PAGES.DEV
+    </div>
+    <div id="filter-container">
+        <div class="control-box">
+             <input type="text" id="search-input" placeholder="Search site name or description">
+        </div>
+    </div>
+</div>
+
+<div id="match-list-container">
+    <p id="loading-message">Loading site index...</p>
+</div>
+
+<div id="az-navigation-bar">
+    </div>
+
+<div class="disclaimer">
+    <center><font size="1px" color="#333">
+   Disclaimer: This index is for informational purposes only. All Content Free Available in Google Search.
+    </font></center>
+</div>
+    
+<script>
+    // --- Configuration (URLs unchanged) ---
+    const AZ_URLS = {
+        '0-9': 'https://live4wap.neocities.org/0.txt',
+        'A': 'https://live4wap.neocities.org/A.txt',
+        'B': 'https://live4wap.neocities.org/B.txt', 
+        'C': 'https://live4wap.neocities.org/C.txt', 
+        'D': 'https://live4wap.neocities.org/D.txt', 
+        'E': 'https://live4wap.neocities.org/E.txt', 
+        'F': 'https://live4wap.neocities.org/F.txt', 
+        'G': 'https://live4wap.neocities.org/G.txt', 
+        'H': 'https://live4wap.neocities.org/H.txt', 
+        'I': 'https://live4wap.neocities.org/I.txt',
+        'J': 'https://live4wap.neocities.org/J.txt', 
+        'K': 'https://live4wap.neocities.org/K.txt', 
+        'L': 'https://live4wap.neocities.org/L.txt', 
+        'M': 'https://live4wap.neocities.org/M.txt', 
+        'N': 'https://live4wap.neocities.org/N.txt', 
+        'O': 'https://live4wap.neocities.org/O.txt', 
+        'P': 'https://live4wap.neocities.org/P.txt', 
+        'Q': 'https://live4wap.neocities.org/Q.txt', 
+        'R': 'https://live4wap.neocities.org/R.txt', 
+        'S': 'https://live4wap.neocities.org/S.txt', 
+        'T': 'https://live4wap.neocities.org/T.txt', 
+        'U': 'https://live4wap.neocities.org/U.txt', 
+        'V': 'https://live4wap.neocities.org/V.txt', 
+        'W': 'https://live4wap.neocities.org/W.txt', 
+        'X': 'https://live4wap.neocities.org/X.txt', 
+        'Y': 'https://live4wap.neocities.org/Y.txt', 
+        'Z': 'https://live4wap.neocities.org/Z.txt', 
+    };
+    
+    // --- Initial State ---
+    let currentAZKey = '0-9'; 
+    let currentCategoryUrl = AZ_URLS[currentAZKey]; 
+    
+    // --- DOM Elements ---
+    const matchListContainer = document.getElementById('match-list-container');
+    const searchInput = document.getElementById('search-input');
+    const azNavigationBar = document.getElementById('az-navigation-bar');
+    
+    // --- Utility Function (Unchanged) ---
+    function truncateText(text, maxLength = 100) {
+        if (!text) return 'No Description Available';
+        if (text.length <= maxLength) return text;
+        
+        let truncated = text.substring(0, maxLength);
+        const lastSpace = truncated.lastIndexOf(' ');
+        
+        if (lastSpace > 0) {
+            truncated = truncated.substring(0, lastSpace);
+        }
+        
+        return truncated + '...';
+    }
+
+
+    // --- Core Functions ---
+    
+    function setupAZNavigationBar() {
+        azNavigationBar.innerHTML = '';
+        // '0-9' is the first button
+        const keysOrder = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        
+        keysOrder.forEach(key => {
+            if (AZ_URLS.hasOwnProperty(key)) {
+                const button = document.createElement('div');
+                button.className = 'az-button';
+                button.textContent = key;
+                button.dataset.key = key;
+                
+                // Set the active class based on the currentAZKey
+                if (key === currentAZKey) {
+                    button.classList.add('active');
+                }
+
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.az-button').forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                    currentAZKey = key;
+                    currentCategoryUrl = AZ_URLS[key];
+                    searchInput.value = '';
+                    init();
+                });
+                
+                azNavigationBar.appendChild(button);
+            }
+        });
+    }
+
+    function filterMatches() {
+        const query = searchInput.value.toLowerCase();
+        const cards = matchListContainer.querySelectorAll('.match-card');
+        
+        cards.forEach(card => {
+            const searchableText = card.dataset.searchableText.toLowerCase();
+            if (searchableText.includes(query)) {
+                card.style.display = 'flex'; 
+            } else {
+                card.style.display = 'none'; 
+            }
+        });
+    }
+
+
+    function selectMatch(matchKey, siteData) {
+        document.querySelectorAll('.match-card').forEach(card => card.classList.remove('active'));
+        
+        const selectedCard = document.querySelector(`.match-card[data-match-key="${matchKey}"]`);
+        if(selectedCard) {
+            selectedCard.classList.add('active');
+        }
+        
+        if (siteData.url) {
+             window.open(siteData.url, '_blank');
+        }
+    }
+
+
+    function renderMatchList(movieSites) {
+        const oldMsg = document.getElementById('loading-message');
+        if (oldMsg) oldMsg.remove();
+        
+        matchListContainer.innerHTML = '';
+        
+        // 1. Sort by Ranking (Ascending)
+        movieSites.sort((a, b) => {
+            const rankA = parseInt(a.Ranking) || Infinity;
+            const rankB = parseInt(b.Ranking) || Infinity;
+            return rankA - rankB; 
+        });
+
+        // 2. Render all sites
+        movieSites.forEach((site, index) => {
+            const matchKey = site.name;
+            const description = truncateText(site.description, 100);
+            const searchableText = `${matchKey} ${description}`;
+            // Use index + 1 as ranking if site.Ranking is not available or invalid
+            const rankingNumber = site.Ranking && !isNaN(parseInt(site.Ranking)) ? parseInt(site.Ranking) : (index + 1);
+            
+            const card = document.createElement('div');
+            card.className = 'match-card';
+            card.dataset.matchKey = matchKey;
+            card.dataset.searchableText = searchableText; 
+            
+            card.innerHTML = `
+                <div class="match-info">
+                    <div class="icon-placeholder">${rankingNumber}</div>
+                    <div class="match-details">
+                        <div class="match-name">${matchKey}</div>
+                        <div class="match-description">${description}</div> 
+                    </div>
+                </div>
+                <span class="arrow"><i class="fa fa-external-link"></i></span>
+            `;
+            
+            card.addEventListener('click', () => selectMatch(matchKey, site));
+            
+            matchListContainer.appendChild(card);
+        });
+    }
+    
+    // --- init function ---
+    async function init() {
+        matchListContainer.innerHTML = '';
+        const msg = document.createElement('p');
+        msg.id = 'loading-message';
+        msg.textContent = `Loading site index for ${currentAZKey}...`;
+        matchListContainer.appendChild(msg);
+
+        if (!AZ_URLS[currentAZKey]) {
+            msg.textContent = `Configuration Error: No URL set for category ${currentAZKey}.`;
+            return;
+        }
+        currentCategoryUrl = AZ_URLS[currentAZKey];
+
+
+        try {
+            const response = await fetch(currentCategoryUrl);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            
+            const movieSitesArray = data[currentAZKey] || data[currentAZKey.toLowerCase()] || [];
+
+            if (!Array.isArray(movieSitesArray)) {
+                throw new Error("Data structure mismatch: Key content is not an array.");
+            }
+            
+            if (movieSitesArray.length === 0) {
+                document.getElementById('loading-message').textContent = `No sites found for ${currentAZKey}.`;
+            } else {
+                 renderMatchList(movieSitesArray);
+            }
+
+        } catch (error) {
+            console.error('Failed to load data:', error);
+            const errMsg = document.getElementById('loading-message');
+            if (errMsg) {
+                errMsg.textContent = `Error loading content for ${currentAZKey}. Check the URL or JSON structure.`;
+                errMsg.style.color = 'red';
+            }
+        }
+    }
+
+    // --- Initialization ---
+    setupAZNavigationBar(); 
+    searchInput.addEventListener('input', filterMatches);
+    init(); // Loads the '0-9' category content initially
+</script>
+
+</body>
+</html>
+
+
+
